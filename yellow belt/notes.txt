@@ -1,0 +1,4 @@
+1) vertical center top header.
+2)Change color of body
+3) Add gradience
+4) Make main height smaller
