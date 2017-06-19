@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bank.css">
+    <title>JQ</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        var dojo = ['dojo', 'mountain', 'bootcamp']
+
+        console.log(dojo);
+
+        $('p').hide();
+
+        $('#hide').click(function() {
+          $('p').hide();
+        });
+
+        $('#show').click(function() {
+          $('p').show();
+        });
+
+        $('h3').hover(function(){
+          $('h2').text('go see the space needle');
+        });
+
+        $('.append').click(function(){
+          $('.result').append('<h4>.append adds html</h4>');
+        });
+
+        $('.button').click(function(){
+          $('button').css('background-color', 'yellow');
+        });
+
+        $('.button').click(function(){
+          ('h4').slideToggle('slow');
+        });
+
+      });
+    </script>
+    <script type="text/javascript">
+    </script>
+  </head>
+  <body>
+      <div class="result"></div>
+      <p>This is a pragraph.</p>
+      <p>This is a paragraph.</p>
+      <h1>Click Me</h1>
+      <a href="#">Click</a>
+      <button id="hide">This will hide all paragraphs!</button>
+      <button id="show">This will show all paragrpahs.</button>
+      <h3>Mountain View, California</h3>
+      <h2>Seattle, Washington</h2>
+      <button class="append">Click to see .append work!</button>
+      <div class="result"></div>
+      <button>Toggle</button>
+        <h4>You should feel lucky</h4>
+  </body>
+</html>

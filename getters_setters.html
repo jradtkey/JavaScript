@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        /*$('button').click(function(){
+          var myText = $('#myParagraph').text();
+          alert(myText);
+        })*/
+
+        $('#Hide').click(function(){
+          $('#myParagraph').hide("slow", function(){
+            alert('animation complete.');
+          });
+        })
+
+        $('#show').click(function(){
+            $('#myPar').show('slow', function() {
+
+            })
+            $('#myParagraph').show('slow', function() {
+              alert('animation complete');
+          });
+        })
+
+        $('#toggle').click(function(){
+          $('#parTog').slideToggle('slow');
+        })
+
+        $('#Slide_down').click(function(){
+          $('#down').slideDown();
+        })
+
+        $('#Slide_up').click(function(){
+          $('#up').slideUp();
+        })
+
+      })
+    </script>
+
+    <title></title>
+  </head>
+  <body>
+    <p id="myParagraph">This is my paragraph</p>
+    <p id="myPar" style="display: none">Back in action</p>
+    <p id="parTog">This paragraph will toggle.</p>
+    <h1 id="down" style="display: none">Slide Down</h1>
+    <h1 id="up">Slide Up</h1>
+    <button id="Hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Slide Toggle</button>
+    <button id="Slide_down">Slide Down</button>
+    <button id="Slide_up">Slide Up</button>
+  </body>
+</html>
