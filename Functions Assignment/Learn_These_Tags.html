@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="functions.css">
+    <style>
+      .vp{
+        background-color: orange;
+      }
+    </style>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('#hide').click(function() {
+          $('#blue_box').hide();
+        })
+
+        $('#show').click(function() {
+          $('.yellow_box').show();
+        })
+
+        $('#toggle').click(function() {
+          $('.red_box').toggle();
+        })
+
+        $('#slide_down').click(function() {
+          $('.dotted_box').slideDown();
+        })
+
+        $('#slide_up').click(function() {
+          $('.solid_box').slideUp();
+        })
+
+        $('#slide_toggle').click(function() {
+          $('.orange_box').slideToggle();
+        })
+
+        $('#fade_in').click(function() {
+          $('.pink_box').fadeIn();
+        })
+
+        $('#fade_out').click(function() {
+          $('.pink_box').fadeOut();
+        })
+
+        $('#add_class').click(function() {
+          $('.green_box').addClass('vp');
+        })
+
+        $('#before').click(function() {
+          $('#blue_box').before('Before');
+        })
+
+        $('#append').click(function() {
+          $('.yellow_box').append('Appended');
+        })
+
+        $('#append').click(function() {
+          $('#append').append('Check the yellow box');
+        })
+
+        $('#attr').click(function() {
+          $('#waves').attr('width', '300px');
+        })
+
+        $('#value').click(function() {
+          var text = $('#val').val();
+          $('#p').text(text);
+        })
+
+      })
+    </script>
+  </head>
+  <body>
+    <main class="main">
+      <div id="divider"></div>
+        <button id="hide">Hide the box</button>
+        <div id="blue_box"><p>Click the button to hide the box.</p></div>
+        <button id="before">Before</button>
+        <p id="before_p">Make this before the box.</p>
+      <div id="divider"></div>
+        <button id="show">Show the box</button>
+        <div class="yellow_box"></div>
+        <p>Click the button to show the box.</p>
+      <div id="divider"></div>
+        <div class="red_box"></div>
+        <p>Keep clicking the button.</p>
+        <button id="toggle">Toggle the box</button>
+      <div id="divider"></div>
+        <div class="dotted_box"></div>
+        <p>Slide it down.</p>
+        <button id="slide_down">Slide me.</button>
+      <div id="divider"></div>
+        <div class="solid_box"></div>
+        <p>Slide me up</p>
+        <button id="slide_up">Slip n slide me  up</button>
+      <div id="divider"></div>
+        <div class="orange_box"></div>
+        <p>Toggle me in and out</p>
+        <button id="slide_toggle">Slide toggle me</button>
+      <div id="divider"></div>
+        <div class="pink_box"></div>
+        <p>Show me the pink</p>
+        <button id="fade_in">Fade in the pink</button><button id="fade_out">Fade out</button>
+      <div id="divider"></div>
+        <div class="green_box"></div>
+        <p>Change the class</p>
+        <button id="add_class">Add class</button>
+      <div id="divider"></div>
+        <button id="append">APPEND</button>
+      <div id="divider"></div>
+        <button id="attr">Change the size of the image</button>
+        <img id="waves" src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Functions Assignment/waves-304052_1280.png" alt="waves">
+      <div id="divider"></div>
+        <p>Type in what you want returned.</p>
+        <input id="val" type="text">
+        <button id="value">Go</button>
+        <p id="p"></p>
+      <div id="divider"></div>
+    </main>
+
+  </body>
+</html>

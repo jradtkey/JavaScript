@@ -1,0 +1,80 @@
+.main{
+  width: 1000px;
+  height: 1000px;
+  text-align: center;
+  padding: 75px;
+}
+
+#blue_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  background-color: blue;
+  display: inline-block;
+}
+
+#divider{
+  width: 100%;
+  height: 15px;
+  background-color: black;
+  margin: 20px 0px 20px 0px;
+}
+
+.yellow_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  background-color: yellow;
+  display: inline-block;
+  display: none;
+}
+
+.red_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  background-color: red;
+  display: inline-block;
+}
+
+.dotted_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  outline: 2px dotted black;
+  display: inline-block;
+  display: none;
+}
+
+.solid_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  outline: 2px solid black;
+  display: inline-block;
+}
+
+.orange_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  background-color: orange;
+  display: inline-block;
+}
+
+.pink_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  background-color: pink;
+  display: inline-block;
+  display: none;
+}
+
+.green_box{
+  width: 200px;
+  height: 200px;
+  margin-left: 300px;
+  background-color: green;
+  display: inline-block;
+}
