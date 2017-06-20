@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hover</title>
+    <link rel="stylesheet" href="hover.css">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $('#first_1').hover(function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/red.png');
+          }, function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/purple-t-shirt.svg');
+        });
+
+        $('#first_2').hover(function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/exctracted.jpg');
+          }, function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/blank-1886001_640.png');
+        });
+
+        $('#first_3').hover(function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/5286239_orig.png');
+          }, function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/t-shirt-34005_640.png');
+        });
+
+        $('#first_4').hover(function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/tee-34006_640.png');
+          }, function(){
+            $(this).attr('src', '/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/t-shirt-153366_640.png');
+        });
+
+      })
+
+    </script>
+  </head>
+  <body>
+
+    <div class="first">
+
+      <img id="first_1"  src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/purple-t-shirt.svg" alt="">
+      <img id="first_2" src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/blank-1886001_640.png" alt="">
+      <img id="first_3" src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/t-shirt-34005_640.png" alt="">
+      <img id="first_4" src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Hover/t-shirt-153366_640.png" alt="">
+
+    </div>
+
+  </body>
+</html>
