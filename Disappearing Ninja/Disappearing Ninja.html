@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $('img').click(function(){
+          $(this).fadeOut();
+        })
+
+        $('#reset').click(function(){
+          $(this).reset();
+        })
+
+      })
+
+    </script>
+    <style>
+      .boxes{
+        width: 450px;
+        height: 200px;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+
+      #reset{
+        margin-top: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>jQuery - Disappearing Ninja</h1>
+    <form class="boxes">
+      <img id="box_1"
+      src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+      <img id="box_2"
+      src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+      <img id="box_3" src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+      <img id="box_4"
+      src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+      <img id="box_5"
+       src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+       <img id="box_6"
+        src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+        <img id="box_7"
+         src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+         <img id="box_8"
+          src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Disappearing Ninja/ninja-155848_640.png" alt="">
+      <button id="reset">Reset</button>
+    </form>
+  </body>
+</html>
