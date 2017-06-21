@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="users_style.css">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+    function attach_results(){
+      var name1 = $('#first_name').val();
+      var name2 = $('#last_name').val();
+      var mail = $('#email').val();
+      var phone = $('#contact').val();
+      $('#first').html(name1);
+      $('#last').html(name2);
+      $('#e_mail').html(mail);
+      $('#fone').html(phone);
+    }
+
+    $(document).ready(function(){
+      $('button').click(function(){
+        attach_results();
+      })
+
+    })
+
+/*    $(document).on('click', 'button', function(){
+
+      var name1 = $('#first_name').val();
+      var name2 = $('#last_name').val();
+      var mail = $('#email').val();
+      var phone = $('#contact').val();
+      $('.results').html(name1 + " " + name2 + " " + mail + " " + phone);
+
+      var name2 = $('#last_name').val();
+      alert(name2);
+    })*/
+
+    </script>
+  </head>
+  <body>
+
+    <div class="head">
+      <h1>Add User</h1>
+    </div>
+
+    <div id="form_1">
+      <p>First Name:</p>
+      <input id="first_name" type="text">
+      <p>Last Name:</p>
+      <input id="last_name" type="text">
+      <p>Email Address:</p>
+      <input id="email" type="text">
+      <p>Contact Number:</p>
+      <input id="contact" type="text">
+      <button id="submit">Submit</button>
+    </div>
+
+
+    <table class="table">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Contact #</th>
+      </tr>
+      <tr>
+        <td id="first"></td>
+        <td id="last"></td>
+        <td id="e_mail"></td>
+        <td id="fone"></td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>

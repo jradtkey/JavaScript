@@ -1,0 +1,35 @@
+.head {
+  width: 350px;
+  border-bottom: 1px solid black;
+}
+
+#form_1{
+  width: 250px;
+  text-align: right;
+  margin-left: 100px;
+}
+
+#form_1 p{
+  text-align: right;
+  display: inline-block;
+}
+
+button{
+  margin-bottom: 10px;
+}
+
+.table{
+  width: 500px;
+  outline: 1px solid black;
+  text-align: center;
+}
+
+.table th{
+  margin: 10px;
+}
+
+.results{
+  width: 500px;
+  height: 40px;
+  outline: 1px dotted red;
+}
