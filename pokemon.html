@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="pokemon_style.css">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $('button').click(function(){
+
+
+        /*
+          var book = [];
+          var i = 1;
+
+          while (i < 152) {
+
+            $('body').append('<div id = pokes><img id =poke></div>');
+
+            var image = $('#poke').attr("src", "http://pokeapi.co/media/img/" + i + ".png");
+
+            $('pokes').append(image);
+
+            i++;
+            return false;
+
+          }
+
+          */
+          var i = 1;
+          while (i < 152) {
+
+          $('.pokemon').append('<img src ='+  'http://pokeapi.co/media/img/' + i + '.png>');
+
+          i++;
+
+          console.log(i);
+
+            }
+
+
+          });
+
+      });
+
+    </script>
+  </head>
+  <body>
+
+      <button type="button" name="button">Press me to see the pokemon!</button>
+
+      <div class="pokemon">
+
+      </div>
+
+  </body>
+</html>
