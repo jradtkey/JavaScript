@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Quote Machine</title>
+    <link rel="stylesheet" href="quote_style.css">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $('#button').click(function(){
+
+            var quotes = [
+              '“The power of imagination makes us infinite.” - John Muir',
+              '“Life is trying things to see if they work.” - Ray Bradbury',
+              '“It does not matter how slowly you go as long as you do not stop.” - Confucius',
+              '“Everything you can imagine is real.” - Pablo Picasso',
+              '“Don’t wait. The time will never be just right.” - Napoleon Hill'
+            ];
+
+            var x = Math.floor((Math.random()*5));
+
+            var quote = quotes[(x - 1)];
+
+            $('.quote_box').html(quote);
+            $('.quote_box').val('');
+
+
+            return false;
+
+        })
+
+      $('#tweet').click(function(){
+        alert('Do you want to tweet this quote?');
+      })
+
+      })
+
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="quote_box">
+
+      </div>
+
+
+      <div class="btn_box">
+
+        <img id="tweet" src="/Users/Jared/Desktop/DojoAssignments/WebFundamentals/Javascript/Random_Quote/tweet.png" alt="tweet">
+        <button type="button" id="button">Find Quote</button>
+
+      </div>
+
+
+
+    </div>
+
+  </body>
+</html>
