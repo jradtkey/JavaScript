@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="contact_card_style.css">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $('button').click(function(){
+          var first_name = $('#first').val();
+          var last_name = $('#last').val();
+          var dex = $('#desc').val();
+          $('#right').append('<div id = "box"><p>' + first_name + " " + last_name + '</p>Click here for description!</div>');
+
+          $(document).on('click', '#box', function(){
+
+  				$('#box').html($('#desc').val());
+  			});
+
+
+          $("#first_name").val("");
+  				$("#last_name").val("");
+  				$("#dex").val("");
+
+          return false;
+        });
+
+
+
+
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <aside class="info">
+      <p>First Name:</p>
+      <input id="first" type="text"><br>
+      <p>Last Name:</p>
+      <input id="last" type="text"><br>
+      <p>Description:</p>
+      <input id="desc" type="text"><br>
+      <button type="submit">Add User</button>
+    </aside>
+    <main>
+
+      <div id="right">
+      </div>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+.info{
+  width: 300px;
+  height: 1000px;
+  outline: 1px dotted red;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.info p{
+  display: inline-block;
+}
+
+#first{
+  display: inline-block;
+}
+
+#desc{
+  width: 300px;
+  height: 150px;
+  text-align: left;
+  vertical-align: top;
+}
+
+main{
+  width: 500px;
+  height: 1000px;
+  outline: 1px dotted blue;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.new{
+  width: 400px;
+  height: 300px;
+  outline: 1px dotted blue;
+}
