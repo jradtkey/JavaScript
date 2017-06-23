@@ -12,17 +12,31 @@
         $('button').click(function(){
           var i = 1;
           while (i < 152) {
-
-          $('.pokemon').append('<img src ='+  'http://pokeapi.co/media/img/' + i + '.png>');
-
+          $('.pokemon').append('<img id='+i+' src ='+  'http://pokeapi.co/media/img/' + i + '.png>');
           i++;
-
-          console.log(i);
-
-            }
+          }
+        });
 
 
-          });
+        $(document).on('click', 'img', function(){
+
+          //var j = $('img').attr('id');
+            $.get('http://pokeapi.co/api/v1/pokemon/12/', function(info){
+
+              $('h2').html(info.name);
+              $('#poke_img').attr('src', 'http://pokeapi.co/media/img/12.png');
+              $('#types').html('<h4>Types</h4>');
+              for (var j = 0; j < (info.types.length); j++) {
+                $('ul').append('<li>'+ info.types[j].name +'</li>');
+              }
+              $('#height').html('<h4>Height</h4>');
+              $('#height_p').html(info.height);
+              $('#weight').html('<h4>Weight</h4>');
+              $('#weight_p').html(info.weight);
+
+            }, 'json');
+
+        });
 
       });
 
@@ -30,9 +44,26 @@
   </head>
   <body>
 
-      <button type="button" name="button">Press me to see the pokemon!</button>
+      <div class="wrapper">
 
-      <div class="pokemon">
+        <button type="button" name="button">Press me to see the pokemon!</button><br>
+
+        <div class="pokemon">
+
+        </div>
+
+        <div class="pokedex">
+
+            <h2></h2>
+            <img id="poke_img" src="" alt="">
+            <h4 id="types"></h4>
+            <ul></ul>
+            <h4 id="height"></h4>
+              <p id="height_p"></p>
+            <h4 id="weight"></h4>
+              <p id="weight_p"></p>
+
+        </div>
 
       </div>
 
