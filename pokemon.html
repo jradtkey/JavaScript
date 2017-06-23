@@ -20,23 +20,32 @@
 
         $(document).on('click', 'img', function(){
 
-          //var j = $('img').attr('id');
-            $.get('http://pokeapi.co/api/v1/pokemon/12/', function(info){
+          var x = ($(this).attr('id'));
+          
+
+             $.get('http://pokeapi.co/api/v1/pokemon/'+x+'/', function(info){
 
               $('h2').html(info.name);
-              $('#poke_img').attr('src', 'http://pokeapi.co/media/img/12.png');
+              $('#poke_img').attr('src', 'http://pokeapi.co/media/img/'+x+'.png');
               $('#types').html('<h4>Types</h4>');
-              for (var j = 0; j < (info.types.length); j++) {
-                $('ul').append('<li>'+ info.types[j].name +'</li>');
+              for (var h = 0; h < (info.types.length); h++) {
+                $('ul').append('<li>'+ info.types[h].name +'</li>');
               }
               $('#height').html('<h4>Height</h4>');
               $('#height_p').html(info.height);
               $('#weight').html('<h4>Weight</h4>');
               $('#weight_p').html(info.weight);
 
-            }, 'json');
 
-        });
+              }, 'json');
+
+
+
+            });
+
+
+
+
 
       });
 
