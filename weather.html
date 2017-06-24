@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        var city = $('#input').val();
+
+        $('#button').click(function() {
+        var city = $('#input').val();
+        $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city + ",us&&appid=77cd27f4512d3d0f6b9e79034eb91705", function(info){
+
+          var temp = $(info.main.temp.units.imperial);
+          var f = temp;
+          $('#name').html(info.name);
+          $('.box').append("<p>Temperature:</p>" + f);
+
+        }, 'json');
+
+        return false;
+    });
+});
+
+    </script>
+    <style>
+    p{
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    .box{
+      display: inline-block;
+    }
+    </style>
+    <title>Weather</title>
+  </head>
+  <body>
+
+    <h4>Find the weather!</h4>
+    <input id="input" type="text" name="input" value="type a city here...">
+    <button id='button'>Search Weather</button>
+    <h2 id="name"></h2>
+    <div class="box">
+    </div>
+
+  </body>
+</html>
