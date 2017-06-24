@@ -15,8 +15,8 @@
         var city = $('#input').val();
         $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city + ",us&&appid=77cd27f4512d3d0f6b9e79034eb91705", function(info){
 
-          var temp = $(info.main.temp.units.imperial);
-          var f = temp;
+          var temp = $(info.main.temp);
+          var f = Math.floor((( temp[0] - 273.15) * 9/5) + 32);
           $('#name').html(info.name);
           $('.box').append("<p>Temperature:</p>" + f);
 
