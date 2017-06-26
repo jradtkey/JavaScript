@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game Of Thrones</title>
+    <link rel="stylesheet" href="got_style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      //stark = 362
+      //targaryen = ??
+      // lannister = 229, 230, 231
+      // baratheon = 15, 16, 17
+
+      $(document).ready(function(){
+
+        $('#stark').click(function(){
+          $.get('https://anapioficeandfire.com/api/houses/362', function(stark_info){
+
+            $('.box').html('<h4>Name: </h4>' + stark_info.name);
+            $('.box').append('<h4>Words:</h4>' + stark_info.words);
+            $('.box').append('<h4>Titles:</h4>');
+            for (var i = 0; i < stark_info.titles.length; i++) {
+              $('.box').append(stark_info.titles[i] + ", ");
+            };
+
+          }, 'json')
+        });
+
+        $('#targaryen').click(function(){
+          $.get('https://anapioficeandfire.com/api/houses/81', function(targ_info){
+
+            $('.box').html('<h4>Name: </h4>' + targ_info.name);
+            $('.box').append('<h4>Words:</h4>' + targ_info.words);
+            $('.box').append('<h4>Titles:</h4>');
+            for (var i = 0; i < targ_info.titles.length; i++) {
+              $('.box').append(targ_info.titles[i] + ", ");
+            };
+
+          }, 'json')
+        });
+
+        $('#lannister').click(function(){
+          $.get('https://anapioficeandfire.com/api/houses/230', function(lannister_info){
+
+            $('.box').html('<h4>Name: </h4>' + lannister_info.name);
+            $('.box').append('<h4>Words:</h4>' + lannister_info.words);
+            $('.box').append('<h4>Titles:</h4>');
+            for (var i = 0; i < lannister_info.titles.length; i++) {
+              $('.box').append(lannister_info.titles[i] + ", ");
+            };
+
+          }, 'json')
+        });
+
+        $('#baratheon').click(function(){
+          $.get('https://anapioficeandfire.com/api/houses/16', function(bar_info){
+
+            $('.box').html('<h4>Name: </h4>' + bar_info.name);
+            $('.box').append('<h4>Words:</h4>' + bar_info.words);
+            $('.box').append('<h4>Titles:</h4>');
+            for (var i = 0; i < bar_info.titles.length; i++) {
+              $('.box').append(bar_info.titles[i] + ", ");
+            };
+
+          }, 'json')
+        });
+
+
+
+      });
+
+
+
+
+
+    /*  for (var i = 1; i < 406; i++) {
+
+        var house = ("https://anapioficeandfire.com/api/houses/"+ i);
+
+        $.get(house, function(info){
+          console.log(info);
+
+          // just go through and search for each house and hard code it into the program.
+
+        }, 'json');
+
+    };*/
+
+    </script>
+  </head>
+  <body>
+
+    <img id=stark src="gameofthrones/stark.jpg" alt="">
+    <img id="targaryen" src="gameofthrones/targaryen.jpg" alt="">
+    <img id="lannister" src="gameofthrones/lannister.jpg" alt="">
+    <img id="baratheon" src="gameofthrones/baratheon.png" alt="">
+
+    <h2>Click an image to find out about that house.</h2>
+
+    <div class="details">
+      <div class="title"><h3>House Details</h3></div>
+      <div class="box">
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

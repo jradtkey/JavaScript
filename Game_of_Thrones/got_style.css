@@ -1,0 +1,27 @@
+img{
+  width: 24%;
+  height: 24%;
+
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.details{
+  width: 632px;
+  height: 450px;
+  margin-left: 25%;
+  outline: 1px solid black;
+  text-align: center;
+
+}
+
+.title{
+  background-color: white;
+}
+
+.box{
+  margin: 20px;
+}
