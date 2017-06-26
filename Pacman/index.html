@@ -3,7 +3,7 @@
 <head>
 	<title>PacMan</title>
 	<style>
-		/* All of our CSS code goes here... */
+
 		* {
 
 		}
@@ -72,14 +72,10 @@
 			vertical-align: top;
 		}
 
-
-
-
-		/* End of CSS */
 	</style>
 </head>
 <body>
-	<!-- All of our HTML code goes here... -->
+
 
 	<div id="world">
 
@@ -87,15 +83,13 @@
 
 	<h1>Lives: <h2></h2> </h1>
 
-	<!-- End of HTML-->
+
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
 $(document).ready(function(){
 
-
-	// All of our JavaScript code goes here...
 
 	//1=> <div class='wall'></div>,
 	//2=> <div class='coin'></div>
@@ -106,7 +100,7 @@ $(document).ready(function(){
 	//7=> <div class='pacman_up'></div>
 	//8=> <div class='pacman_down'></div>
 
-		var map = [
+		var map = [ //if you change the map, make sure to note where pacman begins on lin 114
 			[1,1,1,1,1,1,1,1,1,1,1,1,1],
 			[1,2,2,2,1,2,2,2,1,2,2,2,1],
 			[1,1,4,2,1,2,4,2,1,2,2,1,1],
@@ -117,7 +111,7 @@ $(document).ready(function(){
 			[1,1,1,1,1,1,1,1,1,1,1,1,1],
 		];
 
-		var pacman = {
+		var pacman = { //pacman's starting point
 			x: 6,
 			y: 6,
 		}
@@ -226,6 +220,6 @@ $(document).ready(function(){
 
 	});
 
-	// End of JavaScript
+
 </script>
 </html>
